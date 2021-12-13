@@ -1,3 +1,4 @@
+"""Бесконечное передвижение персонажа, возвращает координаты"""
 xy=[0,0]
 move= 5
 
@@ -10,13 +11,20 @@ while (True):
 
     step= int(input ('сколько сделать шагов?\n'))
 
-    if move==1:
-        xy[1]=xy[1]+step
-    elif move==2:
-        xy[1]=xy[1]-step
-    elif move==3:
-        xy[0]=xy[0]-step
-    elif move==4:
-        xy[0]=xy[0]+step
+if move==1:
+    """движение вверх"""
+    xy[1] =xy[1] + step
+
+elif move==2:
+    """движение вниз"""
+    xy[1] =xy[1] - step
+
+elif move==3:
+    """движение влево"""
+    xy[0] =xy[0] - step
+
+elif move==4:
+    """движение вправо"""
+    xy[0] =xy[0] + step
 
     print("\t",list(xy),'\n')

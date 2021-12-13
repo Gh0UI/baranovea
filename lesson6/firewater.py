@@ -1,7 +1,14 @@
+"""input содержит количество атомов C H O
+необходимых для создания молекулы спирата
+выводит количество полученных молекул 
+"""
+
 with open('input.txt', 'r') as f:
+    """чтение из файла"""
     text=f.read()
 
 try:  
+    """проверка ввода только чисел"""
     test=text.replace(" ", "")
     test=int(test)
 
@@ -16,7 +23,7 @@ list=(text.split(' '))
 
 for elem in list:
     print(elem)
-
+"""определение количества молекул"""
 c=int(list[0])//2   
 h=int(list[1])//6
 o=int(list[2])//1
